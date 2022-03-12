@@ -33,6 +33,6 @@ int _printf(const char *format, ...)
 {
 	va_list parametros;
 
-	vai_start(parametros, format);
+	va_start(parametros, format);
 
 }

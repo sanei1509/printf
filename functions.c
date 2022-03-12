@@ -1,4 +1,5 @@
 /*librerías necesarias*/
+#include <stdarg.h>
 #include <unistd.h>
 
 /*funciones*/
@@ -25,11 +26,14 @@ int _putchar(va_list c)
 void print_string(va_list s)
 {
 	char *str = va_arg(s, char *);
+	int i;
 
 	if (str == NULL)
 	{
-		printf("(nil)");
+		_putchar("(nil)");
 		return;
 	}
-	printf("%s", str);
+	/*printeamos caracter por caracter*/
+	for (i = 0; str[i] != '\0'; i++)
+	_putchar(str[i]);
 }
