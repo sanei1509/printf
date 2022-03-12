@@ -4,14 +4,14 @@
 *@c: recibe char a buscar
 *Return: pointer to a function
 **/
-int (*get_func(char c))(va_list)
+int (*get_func(char c))(va_list a)
 {
 	/*inicializamos vars para recorrer*/
 	int i;
 
 	types_t_f search[] = {
-	{'c', printint},
-	{'s', printstr},
+	{'c', putchar(a)},
+	{'s', print_string},
 	{'\0', NULL}
 	};
 /*comprobar el dato y en caso de exitencia de que si retornar la funcion */
@@ -35,5 +35,4 @@ int _printf(const char *format, ...)
 
 	vai_start(parametros, format);
 
-	
 }
