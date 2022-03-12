@@ -2,25 +2,11 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stddef.h>
+#include "main.h"
 
 /*funciones*/
 
-/* _PUTCHAR */
-
-/**
- * _putchar - escribe el caracter c al stdout
- * @c: el caracter a imprimir
- *
- * Return: caso exitoso 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
 /* PRINT_CHAR */
-
 
 /* PRINT_STRING */
 
@@ -33,16 +19,17 @@ int _putchar(char c)
 */
 int print_char(va_list ch)
 {
-	char r = va_arg(ch, char);
-
-	return (_putchar(r));
+	va_arg(ch, int);
+	_putchar(va_list);
+	return (1);
 }
 
 /**
 *print_string - print pointers
 *@s:receive pointer
+*Return: 1;
 */
-void print_string(va_list s)
+int print_string(va_list s)
 {
 	char *null = "(nil)";
 	char *str = va_arg(s, char *);
@@ -50,12 +37,17 @@ void print_string(va_list s)
 
 	if (str == NULL)
 	{
-		for (e = 0, e < 5; i++)
+		for (e = 0; e < 5; i++)
 			_putchar(null[i]);
 
-		return;
+		return (0);
 	}
 	/*printeamos caracter por caracter*/
 	for (i = 0; str[i] != '\0'; i++)
-	_putchar(str[i]);
+	{
+		_putchar(str[i]);
+		return (1);
+	}
+	return (0);
 }
+

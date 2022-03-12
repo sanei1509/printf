@@ -12,9 +12,9 @@ int (*get_func(char c))(va_list a)
 	int i;
 
 	type_t_f search[] = {
-	{"c", print_char},
-	{"s", print_string},
-	{"\0", NULL}
+	{'c', print_char},
+	{'s', print_string},
+	{'\0', NULL}
 	};
 /*comprobar el dato y en caso de exitencia de que si retornar la funcion */
 	while (search[i])
@@ -49,7 +49,7 @@ int _printf(const char *format, ...)
 					continue;
 				}
 				else
-					(*get_func(format[iter + 1])(variable));
+					(*get_func(format[iter + 1])(parametros));
 			}
 		}
 	}
