@@ -33,7 +33,7 @@ int print_char(va_list ch)
 int print_string(va_list s)
 {
 	char *str = va_arg(s, char*);
-	int i, e;
+	int i;
 
 	if (!(*str == '\0'))
 	{
@@ -45,36 +45,14 @@ int print_string(va_list s)
 	}
 	return (0);
 }
-int print_number(va_list a)
-{
-	unsigned int dec, count, i;
-	int num = va_arg(a, int);
 
-<<<<<<< HEAD
-	if (num < 0)
-	{
-		_putchar('-');
-		i = num * -1;
-	}
-	else
-		i = num;
-	dec = i;
-	count = 1;
-	while (dec > 9)
-	{
-		dec /= 10;
-		dec /= 10;
-	}
-	for (; count >= 1; count /= 10)
-		_putchar(((i / count) % 10) + '0');
-	return (0);
-=======
 /**
 *print_int_dec - print a int
 *@i: receive int number
 */
-void print_int_dec(va_list i)
+int print_number(va_list i)
 {
+	int count = 0;
 	int n = va_arg(i, int);
 	unsigned int dc, dig, nat = n;
 	double f = 1;
@@ -99,7 +77,9 @@ void print_int_dec(va_list i)
 		_putchar(dig + '0');
 		nat = (nat - (dc * dig));
 		dc /= 10;
+		count++;
 	}
 	}
->>>>>>> 44a4cb737b1633487720227feab9c0f966aca194
+	return (count);
+
 }
