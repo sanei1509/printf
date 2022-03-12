@@ -3,6 +3,7 @@
 
 #include <stddef.h>
 #include <stdarg.h>
+#include <stdio.h>
 
 /*struct*/
 typedef struct type_t 
@@ -12,6 +13,7 @@ int (*f)(va_list);
 }type_t_f;
 
 /*prototypes*/
+int _putchar(char c);
 int print_char(va_list s);
 int print_string(va_list *s);
 

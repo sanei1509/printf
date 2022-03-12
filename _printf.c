@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stddef.h>
 #include <stdarg.h>
+#include <stdio.h>
 /**
 *get_func - obtener funcion requerida
 *@c: recibe char a buscar
@@ -17,14 +18,14 @@ int (*get_func(char c))(va_list a)
 	{'\0', NULL}
 	};
 /*comprobar el dato y en caso de exitencia de que si retornar la funcion */
-	while (search[i])
+	while (search[i].c != NULL)
 	{
-		if (c == search[i].type)
+		if (*search[i].c == v)
 			return ((search[i].f));
 
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
 /**
  *_printf - printear algo
