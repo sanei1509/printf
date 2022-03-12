@@ -34,7 +34,6 @@ int _printf(const char *format, ...)
 	int iter;
 	va_list variable;
 
-<<<<<<< HEAD
 	va_start(parametros, format);
 	for (iter = 0; format[iter] != '\0'; iter++)
 	{
@@ -51,8 +50,6 @@ int _printf(const char *format, ...)
 			}
 		}
 	}
-=======
 	vai_start(parametros, format);
 
->>>>>>> 7e2cbee3c99ce959d5a0f4c525bba80c8da063bc
 }
