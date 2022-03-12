@@ -14,6 +14,7 @@ int (*f)(va_list a);
 /*prototypes*/
 int print_char(va_list s);
 int print_string(va_list s);
+int print_number(va_list s);
 int _putchar(char c);
 
 /*printf_prototype*/

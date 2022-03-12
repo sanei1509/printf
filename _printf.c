@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 	type_t_f search[] = {
 	{'c', print_char},
 	{'s', print_string},
+	{'d', print_number},
 	{'\0', NULL}
 	};
 
@@ -23,9 +24,9 @@ int _printf(const char *format, ...)
 	for (iter = 0; format[iter]; iter++)
 	{
 		iterarr = 0;
-		if (format[iter] == '%')
+		if (format[iter] == '%' && format[iter + 1] != '%')
 		{
-			while (iterarr != 3)
+			while (iterarr != 4)
 			{
 				if (search[iterarr].tipo == format[iter + 1])
 				{
@@ -38,6 +39,11 @@ int _printf(const char *format, ...)
 			}
 			if (iterarr == 3 && format[iter] == '%')
 				_putchar(format[iter]);
+		}
+		else if (format[iter] == '%' && format[iter + 1] == '%')
+		{
+		_putchar('%');
+		iter++;
 		}
 		else
 		_putchar(format[iter]);

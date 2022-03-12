@@ -53,4 +53,26 @@ int print_string(va_list s)
 	return (0);
 	}
 }
+int print_number(va_list a)
+{
+	unsigned int dec, count, i;
+	int num = va_arg(a, int);
 
+	if (num < 0)
+	{
+		_putchar('-');
+		i = num * -1;
+	}
+	else
+		i = num;
+	dec = i;
+	count = 1;
+	while (dec > 9)
+	{
+		dec /= 10;
+		dec /= 10;
+	}
+	for (; count >= 1; count /= 10)
+		_putchar(((i / count) % 10) + '0');
+	return (0);
+}
