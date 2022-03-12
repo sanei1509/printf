@@ -7,13 +7,14 @@
 /*struct*/
 typedef struct type_t 
 {
-char c;
-int (*f)(va_list);
+char tipo;
+int (*f)(va_list a);
 }type_t_f;
 
 /*prototypes*/
 int print_char(va_list s);
-int print_string(va_list *s);
+int print_string(va_list s);
+int _putchar(char c);
 
 /*printf_prototype*/
 int _printf(const char *format, ...);

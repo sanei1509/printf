@@ -19,8 +19,9 @@
 */
 int print_char(va_list ch)
 {
-	va_arg(ch, int);
-	_putchar(va_list);
+	char a = va_arg(ch, int);
+
+	_putchar(a);
 	return (1);
 }
 
@@ -32,7 +33,7 @@ int print_char(va_list ch)
 int print_string(va_list s)
 {
 	char *null = "(nil)";
-	char *str = va_arg(s, char *);
+	char *str = va_arg(s, char*);
 	int i, e;
 
 	if (str == NULL)
