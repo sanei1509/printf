@@ -1,12 +1,20 @@
 #include "main.h"
 #include <stdio.h>
+#include <limits.h>
 
 int main(void)
 {
-<<<<<<< HEAD
-	_printf("Let's try to %d printf a simple sentence.\n", 1024);
-=======
-	_printf("Let's try to %d printf a simple sentence.\n", 213123);
->>>>>>> 44a4cb737b1633487720227feab9c0f966aca194
-	return (0);
+    int num = INT_MAX;
+    int num_2 = INT_MIN;
+
+    printf("%d\n", num_2);
+    _printf("%d\n", num_2); 
+    _printf("hola%\n");
+    printf("%d\n", num);
+    _printf("%d\n", num);
+    _printf("Let's try to %%d printf a simple sentence.\n", 1024);
+
+    _printf("Let's try to %d printf a simple sentence.\n", 213123);
+
+    return (0);
 }
