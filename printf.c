@@ -31,9 +31,23 @@ int (*get_func(char c))(va_list)
  **/
 int _printf(const char *format, ...)
 {
-	va_list parametros;
+	int iter;
+	va_list variable;
 
-	vai_start(parametros, format);
-
-	
+	va_start(parametros, format);
+	for (iter = 0; format[iter] != '\0'; iter++)
+	{
+		if (format[i] == '%')
+		{
+			{
+				if ((*get_func(format[iter + 1])(parametros)) == NULL)
+				{
+					_putchar(format[i]);
+					continue;
+				}
+				else
+					(*get_func(format[iter + 1])(variable));
+			}
+		}
+	}
 }
