@@ -35,24 +35,38 @@ int (*get_func(char c))(va_list a)
 int _printf(const char *format, ...)
 {
 	int iter;
+	int iterarr = 0;
 	va_list parametros;
+
+	type_t_f search[] = {
+	{'c', print_char},
+	{'s', print_string},
+	{'\0', NULL}
+	};
 
 	va_start(parametros, format);
 
-	for (iter = 0; format[iter] != '\0'; iter++)
+	for (iter = 0; format[iter]; iter++)
 	{
+		iterarr = 0;
 		if (format[iter] == '%')
 		{
+			while (iterarr != 3)
 			{
-				if ((*get_func(format[iter + 1]))(parametros) == NULL)
+				if (search[iterarr].tipo == format[iter + 1])
 				{
-					_putchar(format[iter]);
-					continue;
+					search[iterarr].f(parametros);
+					iter++;
+					break;
 				}
 				else
-					(*get_func(format[iter + 1])(parametros));
+				iterarr++;
 			}
+			if (iterarr == 3 && format[iter] == '%')
+				_putchar(format[iter]);
 		}
+		else
+		_putchar(format[iter]);
 	}
 
 		return (0);
