@@ -4,14 +4,14 @@
 *@c: recibe char a buscar
 *Return: pointer to a function
 **/
-int (*get_func(char c))(va_list)
+int (*get_func(char c))(va_list a)
 {
 	/*inicializamos vars para recorrer*/
 	int i;
 
 	types_t_f search[] = {
-	{'c', printint},
-	{'s', printstr},
+	{'c', putchar(a)},
+	{'s', print_string},
 	{'\0', NULL}
 	};
 /*comprobar el dato y en caso de exitencia de que si retornar la funcion */
@@ -34,6 +34,7 @@ int _printf(const char *format, ...)
 	int iter;
 	va_list variable;
 
+<<<<<<< HEAD
 	va_start(parametros, format);
 	for (iter = 0; format[iter] != '\0'; iter++)
 	{
@@ -50,4 +51,8 @@ int _printf(const char *format, ...)
 			}
 		}
 	}
+=======
+	vai_start(parametros, format);
+
+>>>>>>> 7e2cbee3c99ce959d5a0f4c525bba80c8da063bc
 }
