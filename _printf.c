@@ -25,21 +25,22 @@ int _printf(const char *format, ...)
 		iterarr = 0;
 		if (format[iter] == '%')
 		{
-			while (iter != 3)
+			while (iterarr != 3)
 			{
-				if (search[iterarr].tipo == format[iter])
+				if (search[iterarr].tipo == format[iter + 1])
 				{
 					search[iterarr].f(parametros);
-					continue;
+					iter++;
+					break;
 				}
+				else
 				iterarr++;
 			}
+			if (iterarr == 3 && format[iter] == '%')
+				_putchar(format[iter]);
 		}
 		else
-		{
 		_putchar(format[iter]);
-		iter++;
-		}
 	}
 
 		return (0);

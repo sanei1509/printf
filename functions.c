@@ -36,19 +36,21 @@ int print_string(va_list s)
 	char *str = va_arg(s, char*);
 	int i, e;
 
-	if (str == NULL)
+	if (*str == '\0')
 	{
-		for (e = 0; e < 5; i++)
-			_putchar(null[i]);
+		for (e = 0; e < 5; e++)
+			_putchar(null[e]);
 
 		return (0);
 	}
+	else
+	{
 	/*printeamos caracter por caracter*/
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		_putchar(str[i]);
-		return (1);
 	}
 	return (0);
+	}
 }
 

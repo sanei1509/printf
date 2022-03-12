@@ -3,6 +3,6 @@
 
 int main(void)
 {
-	_printf("Let's try to printf a simple sentence.\n");
+	_printf("Let's try to %s printf a simple sentence.\n", "dale");
 	return (0);
 }
