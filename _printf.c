@@ -72,7 +72,10 @@ int _printf(const char *format, ...)
 	va_list parametros;
 
 	va_start(parametros, format);
-
+	
+	/*case borders*/
+	if(format != NULL)
+	{
 	for (iter = 0; format[iter]; iter++)
 	{
 		if (format[iter] == '%' && format[iter + 1] != '%')
@@ -92,6 +95,7 @@ int _printf(const char *format, ...)
 		}
 		else
 			_putchar(format[iter]);
+	}
 	}
 	va_end(parametros);
 	return (0);
