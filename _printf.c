@@ -76,7 +76,8 @@ int _printf(const char *format, ...)
 	{
 		for (iter = 0; format[iter]; iter++)
 		{
-			if (format[iter] == '%' && format[iter + 1] != '%' && format[iter + 1] != '\0')
+			if (format[iter] == '%' && format[iter + 1] != '%'
+					&& format[iter + 1] != '\0')
 			{
 				if (verifica(format[iter + 1]) == 1)
 				{
