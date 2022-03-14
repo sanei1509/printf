@@ -4,6 +4,7 @@
 #include <stddef.h>
 #include <stdarg.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 
 /*STRUCT*/
@@ -23,9 +24,10 @@ int _putchar(char c);
 int print_char(va_list s);
 int print_string(va_list s);
 int print_number(va_list s);
-int print_numbers_normal(int n);
 int print_number_ui(va_list i);
-
+int print_number1(int i);
+int print_Binary(va_list a);
+int print_rot(va_list ch);
 /*temporales*/
 int output(int a, int b);
 

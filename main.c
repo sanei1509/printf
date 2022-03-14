@@ -200,7 +200,7 @@ int main(void)
 	printf("\n===============\n");
 	
 	BLUE
-		printf("\nTEST USING %%s SPECIFIER:\n");
+	printf("\nTEST USING %%s SPECIFIER:\n");
 	RESET;
 	printf("Test 19");
 	printf("\nexpected: ");
@@ -261,7 +261,10 @@ int main(void)
 	b = _printf("%s", NULL);
 	cont = cont + output(a,b);
 	printf("\n---------------\n");
-	/**
+
+
+	_printf("num: %R", "HOLA");
+/*
 	printf("Test 26");
 	printf("\nexpected: ");
 	a = printf("Le dicen %c%c la rompe corazones, %s %s", 'l', 'a', "falsas", NULL);

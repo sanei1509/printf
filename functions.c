@@ -5,7 +5,7 @@
 #include <stddef.h>
 #include <math.h>
 #include <string.h>
-
+#include <stdlib.h>
 /*funciones*/
 
 /*PRINT_CHAR*/
@@ -57,7 +57,6 @@ int print_string(va_list s)
 	return (count);
 }
 
-/*PRINT_DECIMAL_INTEGERS*/
 /**
 *print_number - print a int
 *@i: receive int number
@@ -132,35 +131,38 @@ int print_number_ui(va_list i)
 }
 
 /**
- *print_number_normal - print a number
- *@n: receive a number int
+ *print_Binary - normal - print a number
+ *@b: receive a number int
  *Return: num of characters
  */
-int print_number_normal(int n)
+int print_Binary(va_list b)
 {
-	int count = 0;
-	unsigned int dc, dig, nat = n;
-	double f = 1;
+	unsigned int i, aux = 0;
 
-	if (n == 0)
-		_putchar('0');
-	else
+	char *str;
+	int n = 0;
+	int m;
+
+	i = va_arg(b, unsigned int);
+	m = i;
+	while (i > 0)
 	{
-		while (f <= nat)
-			f *= 10;
-
-		dc = f / 10;
-
-		while (dc >= 1)
-		{
-			dig = nat / dc;
-			_putchar(dig + '0');
-			nat = (nat - (dc * dig));
-			dc /= 10;
-			count++;
-		}
+		aux++;
+		i /= 2;
 	}
-	return (count);
+
+	str = malloc(aux * (sizeof(int) + 1));
+
+	while (m > 0)
+	{
+		str[n] = (m % 2) + '0';
+		n++;
+		m /= 2;
+	}
+	while (n >= 0)
+		_putchar(str[n]), n--;
+	free(str);
+	return (aux);
 }
 
 

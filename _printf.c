@@ -1,10 +1,10 @@
 #include "main.h"
-
 #include <stddef.h>
 #include <stdarg.h>
 #include <stdio.h>
 #include <limits.h>
 #include <unistd.h>
+#include <math.h>
 
 /**
 *get_op_func - retornar funcion
@@ -20,10 +20,11 @@ type_t_f search[] = {
 	{'d', print_number},
 	{'i', print_number},
 	{'u', print_number_ui},
+	{'R', print_rot},
 	{'\0', NULL}
 	};
 
-while (iterarr != 5)
+while (iterarr != 7)
 {
 	if (search[iterarr].tipo == s)
 	{
@@ -45,8 +46,8 @@ while (iterarr != 5)
  */
 int verifica(char c)
 {
-	char *cadena = "csdiu";
-	int t = 4;
+	char *cadena = "csdiuR";
+	int t = 6;
 	int i = 0;
 
 	while (i <= t)
