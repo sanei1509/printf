@@ -35,7 +35,7 @@ int output(int a, int b)
 
 int main(void)
 {
-	/**
+	
 	int a, b, cont = 0;
 	BLUE;
 	printf("\nTEST WITHOUT ARGUMENTS:\n\n");
@@ -64,6 +64,7 @@ int main(void)
 	b = _printf("");
 	cont = cont + output(a,b);
 	printf("\n---------------\n");
+	/**
 	printf("Test 4");
 	printf("\nexpected: ");
 	a = printf(NULL);
@@ -289,6 +290,7 @@ int main(void)
 	b = _printf("%d %d", INT_MIN + 34, INT_MAX - 33);
 	cont = cont + output(a,b);
 	printf("\n===============\n");
+	*/
 	if (cont == 0)
 	{
 		GREEN;
@@ -301,8 +303,6 @@ int main(void)
 		printf ("\n\n30 CASES CHECKED, %d ERRORS.\n\n", cont);
 		RESET;
 	}
-	return (cont);
 
-	**/
-	return (0);
+	return (cont);
 }
