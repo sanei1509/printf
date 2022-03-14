@@ -70,6 +70,7 @@ int _printf(const char *format, ...)
 {
 	int num_characters = 0, iter = 0;
 	va_list parametros;
+	char *c = "";
 
 	va_start(parametros, format);
 	if (format != NULL)
@@ -78,6 +79,8 @@ int _printf(const char *format, ...)
 	{
 		if (format[iter] == '%' && format[iter + 1] != '%')
 		{
+			if(format[iter] == *c)
+				return(0);
 			if (verifica(format[iter + 1]) == 1)
 			{
 				num_characters += (*get_op_func(format[iter + 1]))(parametros);
@@ -87,13 +90,9 @@ int _printf(const char *format, ...)
 				_putchar(format[iter]), num_characters++;
 		}
 		else if (format[iter] == '%' && format[iter + 1] == '%')
-		{
 			_putchar('%'), iter++, num_characters++;
-		}
 		else
-		{
 			_putchar(format[iter]), num_characters++;
-		}
 	}
 	}
 	va_end(parametros);

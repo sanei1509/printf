@@ -56,6 +56,7 @@ int main(void)
 	b = _printf(" ");
 	cont = cont + output(a,b);
 	printf("\n---------------\n");
+	/**
 	printf("Test 3");
 	printf("\nexpected: ");
 	a = printf("");
@@ -64,7 +65,6 @@ int main(void)
 	b = _printf("");
 	cont = cont + output(a,b);
 	printf("\n---------------\n");
-	/**
 	printf("Test 4");
 	printf("\nexpected: ");
 	a = printf(NULL);
