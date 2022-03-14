@@ -18,10 +18,11 @@ type_t_f search[] = {
 	{'s', print_string},
 	{'d', print_number},
 	{'i', print_number},
+	{'u', print_number_ui},
 	{'\0', NULL}
 	};
 
-while (iterarr != 4)
+while (iterarr != 5)
 {
 	if (search[iterarr].tipo == s)
 	{
@@ -38,8 +39,8 @@ while (iterarr != 4)
 
 int verifica(char c)
 {
-	char *cadena = "csd";
-	int t = 2;
+	char *cadena = "csdiu";
+	int t = 4;
 	int i = 0;
 
 	while (i <= t)

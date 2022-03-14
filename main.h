@@ -6,19 +6,27 @@
 #include <stdio.h>
 #include <unistd.h>
 
-/*struct*/
-typedef struct type_t 
+/*STRUCT*/
+/**
+ *struct type_t - type_t_f
+ *@tipo: character of conversors
+ *@f: pointer to a function that we need
+ */
+typedef struct type_t
 {
 char tipo;
 int (*f)(va_list a);
-}type_t_f;
+} type_t_f;
 
 /*prototypes*/
 int _putchar(char c);
 int print_char(va_list s);
 int print_string(va_list s);
 int print_number(va_list s);
-int _putchar(char c);
+int print_numbers_normal(int n);
+int print_number_ui(va_list i);
+int print_binary(va_list bin);
+
 
 /*printf_prototype*/
 int _printf(const char *format, ...);
