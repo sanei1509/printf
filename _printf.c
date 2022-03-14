@@ -76,24 +76,28 @@ int _printf(const char *format, ...)
 	{
 	for (iter = 0; format[iter]; iter++)
 	{
-		if(format[iter + 1] != '\0')
 		{
-		if (format[iter] == '%' && format[iter + 1] != '%')
-		{
-			if (verifica(format[iter + 1]) == 1)
+			if (format[iter] == '%' && format[iter + 1] != '%')
+			
 			{
-				num_characters += (*get_op_func(format[iter + 1]))(parametros);
-				iter++;
+				if (verifica(format[iter + 1]) == 1)
+				{
+					num_characters += (*get_op_func(format[iter + 1]))(parametros);
+					iter++;
+				}
+				else if (format[iter + 1] == '\0')
+					break;
+				else
+				{
+	 				_putchar(format[iter]), num_characters++;
+				}
+			}
+			else if (format[iter] == '%' && format[iter + 1] == '%')
+			{
+				_putchar('%'), iter++, num_characters++;
 			}
 			else
-	 		_putchar(format[iter]), num_characters++;
-		}
-		else if (format[iter] == '%' && format[iter + 1] == '%')
-		{
-			_putchar('%'), iter++, num_characters++;
-		}
-		else
-			_putchar(format[iter]), num_characters++;
+				_putchar(format[iter]), num_characters++;
 		}
 	    }
 	}
