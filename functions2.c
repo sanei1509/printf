@@ -19,7 +19,8 @@ int print_rot(va_list ch)
 
 	encode = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	decode = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-
+	if (cadena == NULL)
+	{
 	for (i = 0; cadena[i] != '\0'; i++)
 	{
 		for (a = 0; a < 52; a++)
@@ -30,6 +31,8 @@ int print_rot(va_list ch)
 				break;
 			}
 		}
-}
+	}
+	else
+		return (0);
 	return (i);
-}
+	}
