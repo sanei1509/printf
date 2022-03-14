@@ -74,8 +74,7 @@ int _printf(const char *format, ...)
 	va_start(parametros, format);
 	if (format != NULL)
 	{
-	for (iter = 0; format[iter]; iter++)
-	{
+		for (iter = 0; format[iter]; iter++)
 		{
 			if (format[iter] == '%' && format[iter + 1] != '%' && format[iter + 1] != '\0')
 			{
@@ -87,25 +86,19 @@ int _printf(const char *format, ...)
 				}
 				else
 					_putchar(format[iter]), num_characters++;
-				
 			}
 			else if (format[iter] == '%' && format[iter + 1] == '%')
-			{
 				_putchar('%'), iter++, num_characters++;
-			}
-			else if(format[iter + 1] == '\0' && format[iter] == '%')
+			else if (format[iter + 1] == '\0' && format[iter] == '%')
 			{
-				return(-1);
+				return (-1);
 			}
 			else
-			{	
 				_putchar(format[iter]), num_characters++;
-			}
 		}
 	}
-	}
 	else
-		return(-1);
+		return (-1);
 	va_end(parametros);
 	return (num_characters);
 }
