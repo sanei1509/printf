@@ -68,7 +68,7 @@ int verifica(char c)
 
 int _printf(const char *format, ...)
 {
-	int iter;
+	int num_characters = 0, iter = 0;
 	va_list parametros;
 
 	va_start(parametros, format);
@@ -80,21 +80,27 @@ int _printf(const char *format, ...)
 		{
 			if (verifica(format[iter + 1]) == 1)
 			{
-				(*get_op_func(format[iter + 1]))(parametros);
+				num_characters += (*get_op_func(format[iter + 1]))(parametros);
 				iter++;
 			}
 			else
+			{
 				_putchar(format[iter]);
+				num_characters++;
+			}
 		}
 		else if (format[iter] == '%' && format[iter + 1] == '%')
 		{
 			_putchar('%');
-			iter++;
+			iter++, num_characters++;
 		}
 		else
+		{
 			_putchar(format[iter]);
+			num_characters++;
+		}
 	}
 	}
 	va_end(parametros);
-	return (iter);
+	return (num_characters);
 }

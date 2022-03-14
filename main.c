@@ -35,8 +35,8 @@ int output(int a, int b)
 
 int main(void)
 {
+	/**
 	int a, b, cont = 0;
-
 	BLUE;
 	printf("\nTEST WITHOUT ARGUMENTS:\n\n");
 	RESET;
@@ -302,4 +302,7 @@ int main(void)
 		RESET;
 	}
 	return (cont);
+
+	**/
+	return (0);
 }
