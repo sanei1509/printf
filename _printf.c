@@ -78,7 +78,6 @@ int _printf(const char *format, ...)
 	{
 		{
 			if (format[iter] == '%' && format[iter + 1] != '%')
-			
 			{
 				if (verifica(format[iter + 1]) == 1)
 				{
@@ -87,10 +86,8 @@ int _printf(const char *format, ...)
 				}
 				else if (format[iter + 1] == '\0')
 					break;
-				else
-				{
-	 				_putchar(format[iter]), num_characters++;
-				}
+
+			_putchar(format[iter]), num_characters++;
 			}
 			else if (format[iter] == '%' && format[iter + 1] == '%')
 			{
@@ -99,7 +96,7 @@ int _printf(const char *format, ...)
 			else
 				_putchar(format[iter]), num_characters++;
 		}
-	    }
+	}
 	}
 	va_end(parametros);
 	return (num_characters);
