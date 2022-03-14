@@ -84,20 +84,15 @@ int _printf(const char *format, ...)
 				iter++;
 			}
 			else
-			{
-				_putchar(format[iter]);
-				num_characters++;
-			}
+				_putchar(format[iter]), num_characters++;
 		}
 		else if (format[iter] == '%' && format[iter + 1] == '%')
 		{
-			_putchar('%');
-			iter++, num_characters++;
+			_putchar('%'), iter++, num_characters++;
 		}
 		else
 		{
-			_putchar(format[iter]);
-			num_characters++;
+			_putchar(format[iter]), num_characters++;
 		}
 	}
 	}
