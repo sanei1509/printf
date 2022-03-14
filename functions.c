@@ -1,8 +1,8 @@
 /*librerías necesarias*/
+#include "main.h"
 #include <stdarg.h>
 #include <unistd.h>
 #include <stddef.h>
-#include "main.h"
 
 /*funciones*/
 
@@ -85,15 +85,6 @@ int print_number(va_list i)
 
 }
 
-
-/**
-int casenull(char s)
-{
-	printf("%c",s);
-	return (0);
-}
-**/
-
 /*PRINT UNSIGNED INT*/
 /**
  *print_number_ui - in this case only return negative numbers
@@ -128,6 +119,11 @@ int print_number_ui(va_list i)
 	return (count);
 }
 
+/**
+ *print_number_normal - print a number
+ *@n: receive a number int
+ *Return: num of characters
+ */
 int print_number_normal(int n)
 {
 	int count = 0;

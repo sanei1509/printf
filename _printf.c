@@ -1,4 +1,5 @@
 #include "main.h"
+
 #include <stddef.h>
 #include <stdarg.h>
 #include <stdio.h>
@@ -37,6 +38,11 @@ while (iterarr != 5)
 
 }
 
+/**
+ *verifica - valida antes de correr
+ *@c: cadena con conversores
+ *Return: 0
+ */
 int verifica(char c)
 {
 	char *cadena = "csdiu";
@@ -47,7 +53,7 @@ int verifica(char c)
 	{
 		if (cadena[i] == c)
 			return (1);
-		else
+
 			i++;
 	}
 	return (0);
