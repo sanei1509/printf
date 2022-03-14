@@ -34,15 +34,14 @@ int print_string(va_list s)
 {
 	char *str = va_arg(s, char*);
 	int i;
-	int count;
+	int count = 0;
 
 	if (!(*str == '\0'))
 	{
 	/*printeamos caracter por caracter*/
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		count++;
-		_putchar(str[i]);
+		_putchar(str[i]); count++;
 	}
 	}
 	return (count);
@@ -63,13 +62,13 @@ int print_number(va_list i)
 	double f = 1;
 
 	if (n == 0)
-		_putchar('0');
+		_putchar('0'), count++;
 	else
 	{
 		if (n < 0)
 		{
 			nat = n * -1;
-			_putchar('-');
+			_putchar('-'), count++;
 		}
 
 	while (f <= nat)
@@ -79,10 +78,9 @@ int print_number(va_list i)
 	while (dc >= 1)
 	{
 		dig = nat / dc;
-		_putchar(dig + '0');
+		_putchar(dig + '0'), count++;
 		nat = (nat - (dc * dig));
 		dc /= 10;
-		count++;
 	}
 	}
 	return (count);
