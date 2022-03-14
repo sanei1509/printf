@@ -85,7 +85,7 @@ int _printf(const char *format, ...)
 					iter++;
 				}
 				else if (format[iter + 1] == '\0')
-					break;
+					continue;
 
 			_putchar(format[iter]), num_characters++;
 			}
