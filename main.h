@@ -4,6 +4,7 @@
 #include <stddef.h>
 #include <stdarg.h>
 #include <stdio.h>
+#include <unistd.h>
 
 /*struct*/
 typedef struct type_t 

@@ -50,6 +50,7 @@ int print_string(va_list s)
 *print_int_dec - print a int
 *@i: receive int number
 */
+
 int print_number(va_list i)
 {
 	int count = 0;
@@ -83,3 +84,11 @@ int print_number(va_list i)
 	return (count);
 
 }
+
+/**
+int casenull(char s)
+{
+	printf("%c",s);
+	return (0);
+}
+**/
