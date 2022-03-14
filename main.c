@@ -94,6 +94,7 @@ int main(void)
 	*/
 	_printf("%%ss%");
 	_printf("hola%");
+
 	printf("\n---------------\n");
 	/**
 	printf("Test 7");

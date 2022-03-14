@@ -83,11 +83,11 @@ int _printf(const char *format, ...)
 				{
 					num_characters += (*get_op_func(format[iter + 1]))(parametros);
 					iter++;
-					continue;
+					/*continue;*/
 				}
-				else if (format[iter + 1] == '\0')
-					continue;
-
+				/*else if (format[iter + 1] == '\0')*/
+				/*	continue; */
+			else
 			_putchar(format[iter]), num_characters++;
 			}
 			else if (format[iter] == '%' && format[iter + 1] == '%')
