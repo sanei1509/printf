@@ -3,6 +3,8 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stddef.h>
+#include <math.h>
+#include <string.h>
 
 /*funciones*/
 

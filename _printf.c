@@ -96,5 +96,5 @@ int _printf(const char *format, ...)
 	}
 	}
 	va_end(parametros);
-	return (0);
+	return (iter);
 }
