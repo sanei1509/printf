@@ -32,16 +32,18 @@ int print_string(va_list s)
 {
 	char *str = va_arg(s, char*);
 	int i;
+	int count;
 
 	if (!(*str == '\0'))
 	{
 	/*printeamos caracter por caracter*/
 	for (i = 0; str[i] != '\0'; i++)
 	{
+		count++;
 		_putchar(str[i]);
 	}
 	}
-	return (0);
+	return (count);
 }
 
 /*PRINT_DECIMAL_INTEGERS*/
