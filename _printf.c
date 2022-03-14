@@ -52,9 +52,10 @@ int verifica(char c)
 	while (i <= t)
 	{
 		if (cadena[i] == c)
+		{
 			return (1);
-
-			i++;
+		}
+		i++;
 	}
 	return (0);
 }

@@ -25,8 +25,6 @@ int print_string(va_list s);
 int print_number(va_list s);
 int print_numbers_normal(int n);
 int print_number_ui(va_list i);
-int print_binary(va_list bin);
-
 
 /*printf_prototype*/
 int _printf(const char *format, ...);

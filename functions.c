@@ -127,7 +127,6 @@ int print_number_ui(va_list i)
 int print_number_normal(int n)
 {
 	int count = 0;
-	int n = va_arg(i, int);
 	unsigned int dc, dig, nat = n;
 	double f = 1;
 
