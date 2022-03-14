@@ -17,6 +17,7 @@ int _printf(const char *format, ...)
 	{'c', print_char},
 	{'s', print_string},
 	{'d', print_number},
+	{'u', print_number},
 	{'\0', NULL}
 	};
 

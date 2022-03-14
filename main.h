@@ -5,12 +5,17 @@
 #include <stdarg.h>
 #include <stdio.h>
 
-/*struct*/
-typedef struct type_t 
+/*STRUCT*/
+/**
+ *struct type_t - type_t_f
+ *@tipo: character of conversors
+ *@f: pointer to a function that we need
+ */
+typedef struct type_t
 {
 char tipo;
 int (*f)(va_list a);
-}type_t_f;
+} type_t_f;
 
 /*prototypes*/
 int _putchar(char c);

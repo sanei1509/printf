@@ -6,10 +6,7 @@
 
 /*funciones*/
 
-/* PRINT_CHAR */
-
-/* PRINT_STRING */
-
+/*PRINT_CHAR*/
 /**
 *print_char - writes the character c to stdout
 * @ch: The character to print
@@ -25,6 +22,7 @@ int print_char(va_list ch)
 	return (1);
 }
 
+/*PRINT_STRING*/
 /**
 *print_string - print pointers
 *@s:receive pointer
@@ -46,9 +44,11 @@ int print_string(va_list s)
 	return (0);
 }
 
+/*PRINT_DECIMAL_INTEGERS*/
 /**
-*print_int_dec - print a int
+*print_number - print a int
 *@i: receive int number
+*Return: number of characters
 */
 int print_number(va_list i)
 {
@@ -82,4 +82,38 @@ int print_number(va_list i)
 	}
 	return (count);
 
+}
+
+/*PRINT UNSIGNED INT*/
+/**
+ *print_number - in this case only return negative numbers
+ *@i: receive int number
+ *Return: number of characters
+ */
+int print_number(va_list i)
+{
+	int count = 0;
+	int n = va_arg(i, int);
+	unsigned int dc, dig, nat = n;
+	double f = 1;
+
+	if (n == 0)
+		_putchar('0');
+	else
+	{
+		while (f <= nat)
+			f *= 10;
+
+		dc = f / 10;
+
+		while (dc >= 1)
+		{
+			dig = nat / dc;
+			_putchar(dig + '0');
+			nat = (nat - (dc * dig));
+			dc /= 10;
+			count++;
+		}
+	}
+	return (count);
 }
