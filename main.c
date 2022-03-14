@@ -65,6 +65,7 @@ int main(void)
 	b = _printf("");
 	cont = cont + output(a,b);
 	printf("\n---------------\n");
+	
 	printf("Test 4");
 	printf("\nexpected: ");
 	a = printf(NULL);
@@ -73,6 +74,8 @@ int main(void)
 	b = _printf(NULL);
 	cont = cont + output(a,b);
 	printf("\n---------------\n");
+	
+	
 	printf("Test 5");
 	printf("\nexpected: ");
 	a = printf("%%");
@@ -88,7 +91,11 @@ int main(void)
 	fflush(stdout);
 	b = _printf("%%s%");
 	cont = cont + output(a,b);
+	*/
+	_printf("%%ss%");
+	_printf("hola%");
 	printf("\n---------------\n");
+	/**
 	printf("Test 7");
 	printf("\nexpected: ");
 	a = printf("%%s");
