@@ -72,6 +72,7 @@ int _printf(const char *format, ...)
 	va_list parametros;
 
 	va_start(parametros, format);
+
 	if (format != NULL)
 	{
 		for (iter = 0; format[iter]; iter++)
@@ -99,7 +100,8 @@ int _printf(const char *format, ...)
 		}
 	}
 	else
-		return (-1);
-	va_end(parametros);
+	return (-1);
+
 	return (num_characters);
+	va_end(parametros);
 }

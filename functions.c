@@ -33,10 +33,11 @@ int print_char(va_list ch)
 int print_string(va_list s)
 {
 	char *str = va_arg(s, char*);
-	int i;
+	int i, j;
 	int count = 0;
+	char *null = "(null)";
 
-	if (!(*str == '\0'))
+	if (str != NULL)
 	{
 	/*printeamos caracter por caracter*/
 	for (i = 0; str[i] != '\0'; i++)
@@ -44,6 +45,15 @@ int print_string(va_list s)
 		_putchar(str[i]), count++;
 	}
 	}
+	else if (str == NULL)
+	{
+		for (j = 0; null[j] != '\0'; j++)
+		{
+			_putchar(null[j]);
+		}
+			count = 6;
+	}
+
 	return (count);
 }
 

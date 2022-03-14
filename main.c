@@ -123,7 +123,7 @@ int main(void)
 	b = _printf("%N&&S%%s%%ID%%");
 	cont = cont + output(a,b);
 	printf("\n---------------\n");
-	/**
+
 	printf("Test 11");
 	printf("\nexpected: ");
 	a = printf(NULL);
@@ -132,6 +132,7 @@ int main(void)
 	b = _printf(NULL);
 	cont = cont + output(a,b);
 	printf("\n===============\n");
+	
 	BLUE;
 	printf("\nTEST USING %%c SPECIFIER:\n\n");
 	RESET;
@@ -143,6 +144,7 @@ int main(void)
 	b = _printf("%%c%c", 'B');
 	cont = cont + output(a,b);
 	printf("\n---------------\n");
+
 	printf("Test 13");
 	printf("\nexpected: ");
 	a = printf("Comiend%c oreja af", 'o');
@@ -151,6 +153,7 @@ int main(void)
 	b = _printf("Comiend%c oreja af", 'o');
 	cont = cont + output(a,b);
 	printf("\n---------------\n");
+	
 	printf("Test 14");
 	printf("\nexpected: ");
 	a = printf("%c%c%c%c", 'c', 'a', 'c', 'a');
@@ -159,6 +162,7 @@ int main(void)
 	b = _printf("%c%c%c%c", 'c', 'a', 'c', 'a');
 	cont = cont + output(a,b);
 	printf("\n---------------\n");
+
 	printf("Test 15");
 	printf("\nexpected: ");
 	a = printf("%%c%c%%c", 90);
@@ -167,6 +171,7 @@ int main(void)
 	b = _printf("%%c%c%%c", 90);
 	cont = cont + output(a,b);
 	printf("\n---------------\n");
+	
 	printf("Test 16");
 	printf("\nexpected: ");
 	a = printf("%cantidad inecesaria de texto", 40);
@@ -175,6 +180,7 @@ int main(void)
 	b =_printf("%cantidad inecesaria de texto", 40);
 	cont = cont + output(a,b);
 	printf("\n---------------\n");
+	
 	printf("Test 17");
 	printf("\nexpected: ");
 	a = printf("%%%%c%%c%c", 90, NULL);
@@ -183,6 +189,7 @@ int main(void)
 	b = _printf("%%%%c%%c%c", 90, NULL);
 	cont = cont + output(a,b);
 	printf("\n---------------\n");
+	
 	printf("Test 18");
 	printf("\nexpected: ");
 	a = printf("%c", NULL);
@@ -191,6 +198,7 @@ int main(void)
 	b = _printf("%c", NULL);
 	cont = cont + output(a,b);
 	printf("\n===============\n");
+	
 	BLUE
 		printf("\nTEST USING %%s SPECIFIER:\n");
 	RESET;
@@ -202,6 +210,7 @@ int main(void)
 	b = _printf("TENGO TREMENDO %s", "CALOOOOOOOOOOR%");
 	cont = cont + output(a,b);
 	printf("\n---------------\n");
+	
 	printf("Test 20");
 	printf("\nexpected: ");
 	a = printf("%s", "Perfe%k%t%o%");
@@ -210,6 +219,7 @@ int main(void)
 	b = _printf("%s", "Perfe%k%t%o%");
 	cont = cont + output(a,b);
 	printf("\n---------------\n");
+	
 	printf("Test 21");
 	printf("\nexpected: ");
 	a = printf("%%%s%%%", "No me quiero ir Sr. Stark :(");
@@ -226,6 +236,7 @@ int main(void)
 	b = _printf("%s%c%c%c%c%s", "Pan ", 'c', 'a', 'c', 'a', " Pan");
 	cont = cont + output(a,b);
 	printf("\n---------------\n");
+	
 	printf("Test 23");
 	printf("\nexpected: ");
 	a = printf("D%s Ellia%s", "enis", "s");
@@ -250,6 +261,7 @@ int main(void)
 	b = _printf("%s", NULL);
 	cont = cont + output(a,b);
 	printf("\n---------------\n");
+	/**
 	printf("Test 26");
 	printf("\nexpected: ");
 	a = printf("Le dicen %c%c la rompe corazones, %s %s", 'l', 'a', "falsas", NULL);
