@@ -41,7 +41,7 @@ int print_string(va_list s)
 	/*printeamos caracter por caracter*/
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		_putchar(str[i]); count++;
+		_putchar(str[i]), count++;
 	}
 	}
 	return (count);
