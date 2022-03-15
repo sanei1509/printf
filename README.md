@@ -1,4 +1,4 @@
-I<img src="https://user-images.githubusercontent.com/69850751/158458558-d2fdd0c5-e886-48e7-9ce4-f642a9397930.png">
+<img src="https://user-images.githubusercontent.com/69850751/158458558-d2fdd0c5-e886-48e7-9ce4-f642a9397930.png">
 # _Printf function 
 
 Welcome, this is our **holberton school project**, the one that consisted of creating a small copy of the **printf** function with language C.
