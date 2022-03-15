@@ -12,19 +12,20 @@ In simple words, the printf function prints a message on the screen using a **"f
 
 ## Usage examples and return
 input 
-
+````c
     _printf("hola");
-
+````
 output
-
+````c
     hola
-
+````
 input
-
+````c
     int main(){
         int a = 120;
      _printf("I have %d dollars", a);
     }
+````
    output
    
 
@@ -52,22 +53,24 @@ input
 
 ## Libraries used
 
+````c
     #include <stddef.h>
     #include <stdarg.h>
     #include <stdio.h>
     #include <stdlib.h>
     #include <unistd.h>
-
+````
 
 ## Structure used
+   ````c
     typedef struct type_t
     {
     char tipo;
     int (*f)(va_list a);
     } type_t_f;
-
+````
 ## Functions that we used
-
+````c
     int _putchar(char c);
     int print_char(va_list s);
     int print_string(va_list s);
@@ -76,9 +79,7 @@ input
     int print_number1(int i);
     int print_Binary(va_list a);
     int print_rot(va_list ch);
-
+````
 
 ## authors & github accounts
 [Valentin repetto](https://github.com/valerepetto14)    |  [Santiago Neira](https://github.com/sanei1509] )    
-
-  
