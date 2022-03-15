@@ -5,47 +5,35 @@
 #include <stdlib.h>
 
 /**
-*print_rot - rot13
-*@ch: va_list
-*Return: int
-**/
-int print_rot(va_list ch)
+ *print_rot13 - traduce letras a rot13
+ *@c: string
+ *Return: i which is the counter of characters
+ **/
+int print_rot(va_list c)
 {
-	int i;
-	int a;
-	char *cadena;
+	int i = 0;
+	char *str;
 
-	cadena = va_arg(ch, char*);
+	str = va_arg(c, char *);
 
-	char *encode;
-	char *decode;
-
-	encode = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	decode = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-
-	if (cadena != NULL)
+	while (str[i] != '\0')
 	{
-		for (i = 0; cadena[i] != '\0'; i++)
+		if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
 		{
-			if ((cadena[i] >= 'a' && cadena[i] <= 'z') ||
-				     (cadena[i] >= 'A' && cadena[i] <= 'Z'))
+			if ((str[i] >= 'a' && str[i] <= 'm') || (str[i] >= 'A' && str[i] <= 'M'))
 			{
-				for (a = 0; a < 52; a++)
-				{
-					if (cadena[i] == encode[a])
-					{
-						_putchar(decode[a]);
-						break;
-					}
-				}
+				_putchar(str[i] + 13);
 			}
 			else
-				_putchar(cadena[i]);
+			{
+				_putchar(str[i] - 13);
+			}
 		}
+		else
+		{
+			_putchar(str[i]);
+		}
+		i++;
 	}
-	else
-		return (0);
-
 	return (i);
-
 }
