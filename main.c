@@ -263,8 +263,13 @@ int main(void)
 	printf("\n---------------\n");
 
 
-	_printf("num: %R\n", "HOLA");
+	int i = _printf("%r", "");
+	printf("%d\n", i);
+	_printf("%r\n", "");
+	i = _printf("%r\n", "HOLA");
+	printf("%d\n", i);
 	_printf("string: %r\n", "");
+
 	_printf("string: %r\n", "HOLA MUNDO");
 	_printf("string: %r\n", "HlaA MUNDO 123");
 	_printf("string: %r\n", "hOLA MUNDO 123-----");
