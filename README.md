@@ -10,6 +10,15 @@ In simple words, the printf function prints a message on the screen using a **"f
 > 
 > `$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c`
 
+## Format of printf function
+
+````c
+int _printf(const char *format, ...)
+
+````
+this is to see well what to pass to our function as parameters:
+on one side the first parameter we send a string, where it receives any type (characters, integers, %s, etc) and on the other (...) we indicate the argument.
+
 ## Usage examples and return
 input 
 ````c
