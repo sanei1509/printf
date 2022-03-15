@@ -7,7 +7,7 @@
  *rec_HEXA - function that gives you the hexa number
  *@num: user given number
  **/
-void rec_HEXA(unsigned long int num)
+void rec_HEXA(unsigned int num)
 {
 	int dif;
 

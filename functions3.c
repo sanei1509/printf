@@ -7,7 +7,7 @@
  *rec_oct - str
  *@num: char
  */
-void rec_oct(unsigned long num)
+void rec_oct(unsigned num)
 {
 	if (num / 8)
 	{
@@ -39,7 +39,7 @@ int print_octal(va_list c)
  *rec_hexa - function that gives you the hexa number
  *@num: user given number
  **/
-void rec_hexa(unsigned long int num)
+void rec_hexa(unsigned int num)
 {
 	int dif;
 
