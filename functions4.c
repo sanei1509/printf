@@ -7,7 +7,7 @@
  *rec_HEXA - function that gives you the hexa number
  *@num: user given number
  **/
-void rec_HEXA(unsigned int num)
+void rec_HEXA(unsigned long int num)
 {
 	int dif;
 
@@ -43,7 +43,7 @@ void rec_HEXA(unsigned int num)
 
 int print_HEXA(va_list c)
 {
-	int num;
+	long int num;
 	unsigned int iter;
 
 	iter = va_arg(c, unsigned int);
