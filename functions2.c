@@ -55,15 +55,12 @@ cadena = va_arg(ch, char*);
 			return (0);
 
 		while (cadena[i] != '\0')
-		{
 			i++;
-		}
-		cont = i;
-		for (i = i; i >= 0; i--)
-		{
-			_putchar (cadena[i]);
-		}
 
+		cont = i;
+
+		for (i = i; i >= 0; i--)
+			_putchar (cadena[i]);
 	}
 	else
 		return (0);
