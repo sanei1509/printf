@@ -13,26 +13,39 @@ int print_rot(va_list ch)
 {
 	int i;
 	int a;
-	char *cadena = va_arg(ch, char*);
+	char *cadena;
+
+	cadena = va_arg(ch, char*);
+
 	char *encode;
 	char *decode;
 
 	encode = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	decode = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	if (cadena == NULL)
+
+	if (cadena != NULL)
 	{
-	for (i = 0; cadena[i] != '\0'; i++)
-	{
-		for (a = 0; a < 52; a++)
+		for (i = 0; cadena[i] != '\0'; i++)
 		{
-			if (cadena[i] == encode[a])
+			if ((cadena[i] >= 'a' && cadena[i] <= 'z') ||
+				     (cadena[i] >= 'A' && cadena[i] <= 'Z'))
 			{
-				_putchar(decode[a]);
-				break;
+				for (a = 0; a < 52; a++)
+				{
+					if (cadena[i] == encode[a])
+					{
+						_putchar(decode[a]);
+						break;
+					}
+				}
 			}
+			else
+				_putchar(cadena[i]);
 		}
 	}
 	else
 		return (0);
+
 	return (i);
-	}
+
+}

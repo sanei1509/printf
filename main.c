@@ -263,7 +263,7 @@ int main(void)
 	printf("\n---------------\n");
 
 
-	_printf("num: %R", "HOLA");
+	_printf("num: %R ", "HOLA");
 /*
 	printf("Test 26");
 	printf("\nexpected: ");
