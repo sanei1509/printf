@@ -1,5 +1,4 @@
-<img src="https://holbertonschool.uy/wp-content/themes/holberton/assets/img/logo.png">
-
+I<img src="https://user-images.githubusercontent.com/69850751/158458558-d2fdd0c5-e886-48e7-9ce4-f642a9397930.png">
 # _Printf function 
 
 Welcome, this is our **holberton school project**, the one that consisted of creating a small copy of the **printf** function with language C.
@@ -22,11 +21,11 @@ on one side the first parameter we send a string, where it receives any type (ch
 ## Usage examples and return
 input 
 ````c
-    _printf("hola");
+    _printf("Hello");
 ````
 output
 ````c
-    hola
+    Hello
 ````
 input
 ````c
@@ -86,8 +85,12 @@ input
     int print_number(va_list s);
     int print_number_ui(va_list i);
     int print_number1(int i);
-    int print_Binary(va_list a);
+    rec_bin(unsigned int n);
+    void rec_bin(unsigned int n);
+    int print_binary(va_list a);
+    int print_octal(va_list c);
     int print_rot(va_list ch);
+    int print_rev(va_list ch);
 ````
 
 ## authors & github accounts
