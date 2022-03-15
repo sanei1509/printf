@@ -261,7 +261,7 @@ int main(void)
 	b = _printf("%s", NULL);
 	cont = cont + output(a,b);
 	printf("\n---------------\n");
-	_printf("%o\n", 540);
+	_printf("%X\n", 240);
 
 	/*
 	printf("Test 26");
