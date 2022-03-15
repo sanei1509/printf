@@ -1,8 +1,8 @@
 _PRINTF() - Manual for our function _printf();
 
-NAME | SYNOPSIS/FUNCTIONING | DESCRIPTION |RETURN VALUE |
+NAME | SYNOPSIS/FUNCTIONING | DESCRIPTION |RETURN VALUE | EXAMPLES
 
-_PRINTF()  ---------> MANUAL ------> SMALL COPY OF man PRINTF(3)
+_PRINTF()  ------- MANUAL ------> SMALL COPY OF man PRINTF(3)
 
 NAME
 	printf => output converter
@@ -10,14 +10,14 @@ NAME
 
 SYNOPSIS
 
-	Libraries that you need
+	|Libraries that you need
 	
 	#include <stdio.h>
 	#include <stdarg>
 
 	Structure of the function call
 
------>	int _printf(const char *format, ...)
+-----	int _printf(const char *format, ...)
 	 
 	format - pointer that receive arguments of any type.
 	
@@ -32,9 +32,23 @@ DESCRIPTION
 	- write output to stdout( the standar output stream)
 	
 	
-	Converters or options
+	|Converters or options
+
+	receive a character string, write after the percentage(%)
+	symbol to know what you want to call that function.
+
 		
-	
+	"%c" - char
+
+	"%s" - string 
+
+	"%d" - decimal numbers
+
+	"%i" - integers
+
+	"%u" - unsigned int
+
+	"%R  - ROT13 convertions
 NOTES
 
 
