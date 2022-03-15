@@ -1,3 +1,63 @@
-Manual for our function _printf();
+_PRINTF() - Manual for our function _printf();
+
+NAME | SYNOPSIS/FUNCTIONING | DESCRIPTION |RETURN VALUE |
+
+_PRINTF()  ---------> MANUAL ------> SMALL COPY OF man PRINTF(3)
+
+NAME
+	printf => output converter
+
+
+SYNOPSIS
+
+	Libraries that you need
+	
+	#include <stdio.h>
+	#include <stdarg>
+
+	Structure of the function call
+
+----->	int _printf(const char *format, ...)
+	 
+	format - pointer that receive arguments of any type.
+	
+	 (...) - receive a indefinite number of parameters.
+
+
+
+DESCRIPTION
+	
+	The function _printf() produce output accord to a format or options 
+	that we create, are described and explained below.
+	- write output to stdout( the standar output stream)
+	
+	
+	Converters or options
+		
+	
+NOTES
+
+
+BUGS
+
+
+EXAMPLES OF USES
+
+
+
+REFERENCIAS VALIOSAS
+
+
+
+
+COLOFÓN
+
+
+
+
+
+
+
+
 
 
