@@ -52,7 +52,7 @@ while (iterarr != 12)
 int verifica(char c)
 {
 	char *cadena = "csdiRurboxX";
-	int t = 9;
+	int t = 10;
 	int i = 0;
 
 	while (i <= t)
