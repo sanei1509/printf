@@ -46,7 +46,7 @@ int print_rot(va_list c)
 int print_rev(va_list ch)
 {
 char *cadena;
-int i = 0;
+int i = 0 ,cont = 0;
 
 cadena = va_arg(ch, char*);
 	if (cadena != NULL)
@@ -55,6 +55,7 @@ cadena = va_arg(ch, char*);
 		{
 			i++;
 		}
+		cont = i;
 		for (i = i; i >= 0; i--)
 		{
 			_putchar (cadena[i]);
@@ -62,7 +63,7 @@ cadena = va_arg(ch, char*);
 	}
 	else
 		return (0);
-return (i);
+return (cont);
 }
 
 

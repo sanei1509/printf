@@ -264,7 +264,10 @@ int main(void)
 
 
 	_printf("num: %R\n", "HOLA");
-	_printf("string: %r\n", "HOLA");
+	_printf("string: %r\n", "");
+	_printf("string: %r\n", "HOLA MUNDO");
+	_printf("string: %r\n", "HlaA MUNDO 123");
+	_printf("string: %r\n", "hOLA MUNDO 123-----");
 /*
 	printf("Test 26");
 	printf("\nexpected: ");
