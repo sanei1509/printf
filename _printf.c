@@ -23,10 +23,11 @@ type_t_f search[] = {
 	{'R', print_rot},
 	{'r', print_rev},
 	{'b', print_binary},
+	{'o', print_octal},
 	{'\0', NULL},
 	};
 
-while (iterarr != 9)
+while (iterarr != 10)
 {
 	if (search[iterarr].tipo == s)
 	{
@@ -48,8 +49,8 @@ while (iterarr != 9)
  */
 int verifica(char c)
 {
-	char *cadena = "csdiRurb";
-	int t = 7;
+	char *cadena = "csdiRurbo";
+	int t = 8;
 	int i = 0;
 
 	while (i <= t)

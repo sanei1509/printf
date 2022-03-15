@@ -27,7 +27,9 @@ int print_number(va_list s);
 int print_number_ui(va_list i);
 int print_number1(int i);
 void rec_bin(unsigned int n);
+void rec_bin(unsigned int n);
 int print_binary(va_list a);
+int print_octal(va_list c);
 int print_rot(va_list ch);
 int print_rev(va_list ch);
 /*temporales*/
