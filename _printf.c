@@ -25,6 +25,7 @@ type_t_f search[] = {
 	{'b', print_binary},
 	{'o', print_octal},
 	{'x', print_hexa},
+	{'X', print_hexa},
 	{'\0', NULL},
 	};
 
