@@ -1,4 +1,4 @@
-src="https://holbertonschool.uy/wp-content/themes/holberton/assets/img/logo.png">
+<img src="https://holbertonschool.uy/wp-content/themes/holberton/assets/img/logo.png">
 
 # _Printf function 
 
