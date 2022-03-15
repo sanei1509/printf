@@ -10,11 +10,6 @@ NAME
 
 SYNOPSIS
 
-	|Libraries that you need
-	
-	#include <stdio.h>
-	#include <stdarg>
-
 	Structure of the function call
 
 -----	int _printf(const char *format, ...)
@@ -22,7 +17,6 @@ SYNOPSIS
 	format - pointer that receive arguments of any type.
 	
 	 (...) - receive a indefinite number of parameters.
-
 
 
 DESCRIPTION
@@ -49,22 +43,27 @@ DESCRIPTION
 	"%u" - unsigned int
 
 	"%R  - ROT13 convertions
-NOTES
-
-
-BUGS
 
 
 EXAMPLES OF USES
+	-input
+		int a = 120;
+		_printf("I have %d dollars", a);
+	-output
+		[I have 120 dollars]
+    	
+	-input
+		_printf("%s", "hola");
+	-output
+		[hola];
+	
+
+
 
 
 
 REFERENCIAS VALIOSAS
 
-
-
-
-COLOFÓN
 
 
 
