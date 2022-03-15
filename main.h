@@ -26,6 +26,8 @@ int print_string(va_list s);
 int print_number(va_list s);
 int print_number_ui(va_list i);
 int print_number1(int i);
+void rec_HEXA(unsigned int num);
+int print_HEXA(va_list num);
 void rec_hexa(unsigned int num);
 int print_hexa(va_list num);
 void rec_bin(unsigned int n);
