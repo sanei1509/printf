@@ -261,19 +261,11 @@ int main(void)
 	b = _printf("%s", NULL);
 	cont = cont + output(a,b);
 	printf("\n---------------\n");
+	int num = _printf("%b",28);
+	printf("%d\n", num);
+	_printf("%b\n", 28);
 
-
-	int i = _printf("%r", "");
-	printf("%d\n", i);
-	_printf("%r\n", "");
-	i = _printf("%r\n", "HOLA");
-	printf("%d\n", i);
-	_printf("string: %r\n", "");
-
-	_printf("string: %r\n", "HOLA MUNDO");
-	_printf("string: %r\n", "HlaA MUNDO 123");
-	_printf("string: %r\n", "hOLA MUNDO 123-----");
-/*
+	/*
 	printf("Test 26");
 	printf("\nexpected: ");
 	a = printf("Le dicen %c%c la rompe corazones, %s %s", 'l', 'a', "falsas", NULL);

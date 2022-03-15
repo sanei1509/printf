@@ -66,5 +66,34 @@ cadena = va_arg(ch, char*);
 		return (0);
 return (cont);
 }
+/**
+ *rec_bin - str
+ *@num: char
+ */
+void rec_bin(unsigned int num)
+{
+	if (num / 2)
+	{
+		rec_bin(num / 2);
+		_putchar(num % 2 + '0');
+	}
+	else
+		_putchar(num % 2 + '0');
+}
 
+/**
+ *print_binary - str
+ * *@c: c
+ * *Return: lenght
+ * **/
+int print_binary(va_list c)
+{
+	unsigned int num;
+	int iter;
 
+	num = va_arg(c, unsigned int);
+	rec_bin(num);
+	for (iter = 0; num / 2; iter++)
+		num = num / 2;
+	return (iter);
+}
