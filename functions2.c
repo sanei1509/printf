@@ -95,5 +95,5 @@ int print_binary(va_list c)
 	rec_bin(num);
 	for (iter = 0; num / 2; iter++)
 		num = num / 2;
-	return (iter);
+	return (iter + 1);
 }
