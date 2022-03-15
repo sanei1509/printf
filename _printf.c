@@ -29,7 +29,7 @@ type_t_f search[] = {
 	{'\0', NULL},
 	};
 
-while (iterarr != 11)
+while (iterarr != 12)
 {
 	if (search[iterarr].tipo == s)
 	{
@@ -51,7 +51,7 @@ while (iterarr != 11)
  */
 int verifica(char c)
 {
-	char *cadena = "csdiRurbox";
+	char *cadena = "csdiRurboxX";
 	int t = 9;
 	int i = 0;
 
