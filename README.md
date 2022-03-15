@@ -57,7 +57,7 @@ input
 | **%s**  | `String`       | Hello !!    |
 |   **%d & %i** | `Signed Decimal Integer`   |   200|
 | **%**  | `Print a % when we find %% inside the printf function`       | %      |
-| **%r**   | `rot13 Hola`  | Ubyn    |
+| **%r**   | `rot13 hello`  | uryyb    |
 
 ## Libraries used
 
