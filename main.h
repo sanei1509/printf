@@ -28,6 +28,7 @@ int print_number_ui(va_list i);
 int print_number1(int i);
 int print_Binary(va_list a);
 int print_rot(va_list ch);
+int print_rev(va_list ch);
 /*temporales*/
 int output(int a, int b);
 

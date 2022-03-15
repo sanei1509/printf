@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 /**
- *print_rot13 - traduce letras a rot13
+ *print_rot - traduce letras a rot13
  *@c: string
  *Return: i which is the counter of characters
  **/
@@ -36,4 +36,30 @@ int print_rot(va_list c)
 		i++;
 	}
 	return (i);
+}
+
+/**
+* print_rev - str
+*@s: char
+**/
+int print_rev(va_list ch)
+{
+char *cadena;
+int i = 0;
+
+cadena = va_arg(ch, char*);
+	if (cadena != NULL)
+	{
+		while (cadena[i] != '\0')
+		{
+			i++;
+		}
+		for (i = i - 1 ; i >= 0; i--)
+		{
+			_putchar (cadena[i]);
+		}
+	}
+	else 
+		return (0);
+return (i);
 }
