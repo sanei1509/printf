@@ -41,11 +41,11 @@ input
 
 ## *Resources of the original function*
 
- *- Libreria que permite usar la función*
+ *- Library that allows to use the function*
 
 > STDIO.H](https://www.tutorialspoint.com/c_standard_library/stdio_h.htm)**
 
-*- man printf(3) explica a detalla el funcionamiento y uso de la función*
+*- man printf(3) explains in detail the operation and use of the function*
 > man printf(3)
 (https://man7.org/linux/man-pages/man3/printf.3.html)
 
