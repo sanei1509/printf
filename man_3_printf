@@ -1,8 +1,8 @@
-_PRINTF() - Manual for our function _printf();
+_PRINTF() - Manual for our function _printf().
 
-NAME | SYNOPSIS/FUNCTIONING | DESCRIPTION |RETURN VALUE | EXAMPLES
+NAME | SYNOPSIS/FUNCTIONING | DESCRIPTION | RETURN VALUE | EXAMPLES | CASE BORDERS | FOR USE
 
-_PRINTF()  ------- MANUAL ------> SMALL COPY OF man PRINTF(3)
+_PRINTF()  ----------------------- MANUAL ------------------>
 
 NAME
 	printf => output converter
@@ -18,11 +18,16 @@ SYNOPSIS
 	
 	 (...) - receive a indefinite number of parameters.
 
+USE 	
+	for use this function add the #include "main.h" to his file.  
+	
+	
 
 DESCRIPTION
 	
 	The function _printf() produce output accord to a format or options 
-	that we create, are described and explained below.
+	that we create these allow the function to be flexible and manipulable 
+	referring to the type of data we want to write, are described and explained below.
 	- write output to stdout( the standar output stream)
 	
 	
@@ -30,22 +35,44 @@ DESCRIPTION
 
 	receive a character string, write after the percentage(%)
 	symbol to know what you want to call that function.
-
+	
+	"=>"  []" refers to the output.
 		
-	"%c" - char
+	'c' - receive a int, that conver to unsigned char and write character to the standard output.
+		example: _printf("%c", 'c');    => [ c ]
 
-	"%s" - string 
+	's' - receive a pointer char (char *) to an array of characters 
+		and characters of the string are written.
 
-	"%d" - decimal numbers
+		example: _printf("hello %s", "valentin") => [hello valentin]
 
-	"%i" - integers
+	'd & i' - take the number int and write in the standar output.
+		example: _printf("%d", 200); => [ 200 ]
 
-	"%u" - unsigned int
+	'u' - takes an unsigned integer number and writes it to standard output.
 
-	"%R  - ROT13 convertions
+	'R'  - ROT13 conversion - takes a pointer to a string and encrypts the 
+		contents to ROT13 and writes it to standard output.
+		example: _printf("%R", "hello world");  => [ uryyb jbeyq ]
 
+	'o' - translate or convert an unsigned decimal to an unsigned octal (base 8 number).
+		example: _printf("%o", 1230);  => [ 2316 ]
+	
+	'x' - hexadecimal ,convert an unsigned decimal to an unsignde hexadecimal (base 16 number) 
+		using lowercase alphabet ("abcdef").
+		example: _printf("%x", 1230);  => [ 4CE ]		
+
+	'X' - hexadecimal, the same that 'x' but using uppercase alphabet "ABCDEF".
+		example: _printf("%x", 1230);  => [ 4ce ]
+	
+	'b' - convert a unsigned int to a binary and write in the standard output.
+		example: _printf("%b", 28);   => [ 11100 ]
+	
+	'r' - takes a pointer to char (char *) and writes its contents backwards (end to start) to standard output.
+		example: _printf("%d", "hello world");   =>  [ olleh dlrow ]
 
 EXAMPLES OF USES
+
 	-input
 		int a = 120;
 		_printf("I have %d dollars", a);
@@ -53,24 +80,26 @@ EXAMPLES OF USES
 		[I have 120 dollars]
     	
 	-input
-		_printf("%s", "hola");
+		_printf("%s", "hello");
 	-output
-		[hola];
+		[hello];
+
+	
 	
 
+RETURN VALUE 
+	in the case that everything goes well the function returns the number of characters of the output excluding the null byte
+	
+	In the event that we find an output error, the function returns a negative value (-1).
+	
+	On other cases that our function receives something not supported, our function will not return anything.
 
 
+SOME CASE BORDERS OR WARNING
+	_printf("%%");  --> a 2 percentege equals one
+	
+	_printf("%s", NULL); --> 2 percentage - write (null) in the standard output 
 
-
-REFERENCIAS VALIOSAS
-
-
-
-
-
-
-
-
-
-
-
+	-printf(NULL);  --> return (-1);
+	
+	

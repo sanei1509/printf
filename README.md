@@ -1,4 +1,4 @@
-I<img src="https://user-images.githubusercontent.com/69850751/158458558-d2fdd0c5-e886-48e7-9ce4-f642a9397930.png">
+<img src="https://user-images.githubusercontent.com/69850751/158458558-d2fdd0c5-e886-48e7-9ce4-f642a9397930.png">
 # _Printf function 
 
 Welcome, this is our **holberton school project**, the one that consisted of creating a small copy of the **printf** function with language C.
@@ -57,7 +57,7 @@ input
 | **%s**  | `String`       | Hello !!    |
 |   **%d & %i** | `Signed Decimal Integer`   |   200|
 | **%**  | `Print a % when we find %% inside the printf function`       | %      |
-| **%r**   | `rot13 Hola`  | Ubyn    |
+| **%r**   | `rot13 hello`  | uryyb    |
 
 ## Libraries used
 
