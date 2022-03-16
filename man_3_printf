@@ -1,6 +1,6 @@
-_PRINTF() - Manual for our function _printf();
+_PRINTF() - Manual for our function _printf().
 
-NAME | SYNOPSIS/FUNCTIONING | DESCRIPTION | RETURN VALUE | EXAMPLES | CASE BORDERS
+NAME | SYNOPSIS/FUNCTIONING | DESCRIPTION | RETURN VALUE | EXAMPLES | CASE BORDERS | FOR USE
 
 _PRINTF()  ----------------------- MANUAL ------------------>
 
@@ -18,11 +18,16 @@ SYNOPSIS
 	
 	 (...) - receive a indefinite number of parameters.
 
+USE 	
+	for use this function add the #include "main.h" to his file.  
+	
+	
 
 DESCRIPTION
 	
 	The function _printf() produce output accord to a format or options 
-	that we create, are described and explained below.
+	that we create these allow the function to be flexible and manipulable 
+	referring to the type of data we want to write, are described and explained below.
 	- write output to stdout( the standar output stream)
 	
 	
@@ -36,7 +41,9 @@ DESCRIPTION
 	'c' - receive a int, that conver to unsigned char and write character to the standard output.
 		example: _printf("%c", 'c');    => [ c ]
 
-	's' - receive a pointer char (char *) to an array of characters and characters of the string are written.
+	's' - receive a pointer char (char *) to an array of characters 
+		and characters of the string are written.
+
 		example: _printf("hello %s", "valentin") => [hello valentin]
 
 	'd & i' - take the number int and write in the standar output.
@@ -44,13 +51,15 @@ DESCRIPTION
 
 	'u' - takes an unsigned integer number and writes it to standard output.
 
-	'R'  - ROT13 conversion - takes a pointer to a string and encrypts the contents to ROT13 and writes it to standard output.
+	'R'  - ROT13 conversion - takes a pointer to a string and encrypts the 
+		contents to ROT13 and writes it to standard output.
 		example: _printf("%R", "hello world");  => [ uryyb jbeyq ]
 
 	'o' - translate or convert an unsigned decimal to an unsigned octal (base 8 number).
 		example: _printf("%o", 1230);  => [ 2316 ]
 	
-	'x' - hexadecimal ,convert an unsigned decimal to an unsignde hexadecimal (base 16 number) using lowercase alphabet ("abcdef").
+	'x' - hexadecimal ,convert an unsigned decimal to an unsignde hexadecimal (base 16 number) 
+		using lowercase alphabet ("abcdef").
 		example: _printf("%x", 1230);  => [ 4CE ]		
 
 	'X' - hexadecimal, the same that 'x' but using uppercase alphabet "ABCDEF".
@@ -89,22 +98,8 @@ RETURN VALUE
 SOME CASE BORDERS OR WARNING
 	_printf("%%");  --> a 2 percentege equals one
 	
-	_printf("%s", NULL); --> 2 percentage e 
+	_printf("%s", NULL); --> 2 percentage - write (null) in the standard output 
 
 	-printf(NULL);  --> return (-1);
 	
 	
-
-	
-	
-
-
-
-
-
-
-
-
-
-
-
