@@ -35,6 +35,7 @@ int print_binary(va_list a);
 int print_octal(va_list c);
 int print_rot(va_list ch);
 int print_rev(va_list ch);
+int print_pointer(va_list c);
 /*temporales*/
 int output(int a, int b);
 
