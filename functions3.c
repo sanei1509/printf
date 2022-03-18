@@ -7,7 +7,7 @@
  *rec_oct - str
  *@num: char
  */
-void rec_oct(unsigned num)
+void rec_oct(unsigned int num)
 {
 	if (num / 8)
 	{
