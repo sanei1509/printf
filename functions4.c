@@ -96,19 +96,19 @@ void print_hexa_pointer(unsigned long num)
 int print_pointer(va_list c)
 {
 	unsigned long i = va_arg(c, unsigned long);
-	int num = 0;
+	int num = 0, cont = 0;
 
 	if (i == 0)
 	{
 		return (_printf("(nil)"));
 	}
 
-	num += _putchar('0');
-	num += _putchar('x');
+	cont += _putchar('0');
+	cont += _putchar('x');
 	print_hexa_pointer(i);
 	for (num = 0; i / 16; num++)
 	{
 		i = i / 16;
 	}
-	return (num + 1);
+	return ((num + cont) + 1);
 }
