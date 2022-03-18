@@ -58,20 +58,35 @@ int print_HEXA(va_list c)
 }
 /**
    *print_hexa_pointer - function that prints the hexa number
-   *@n: alias of the list of parameters
+   *@num: alias of the list of parameters
    *Return: iter + 1, total amount of chars
    **/
-int print_hexa_pointer(unsigned long n)
+void print_hexa_pointer(unsigned long num)
 {
-	long int num;
+	int dif;
 
-	rec_hexa(n);
-
-	for (num = 0; n / 16; num++)
+	if (num / 16)
 	{
-		n = n / 16;
+		rec_hexa(num / 16);
+		if (num % 16 > 9 && num % 16 <= 16)
+		{
+			dif = (num % 16) - 9;
+			_putchar((dif + 1) + '_');
+		}
+		else
+			_putchar(num % 16 + '0');
 	}
-	return (num + 1);
+	else
+	{
+		if (num % 16 > 9 && num % 16 < 16)
+		{
+			dif = (num % 16) - 9;
+			_putchar((dif + 1) + '_');
+		}
+		else
+			_putchar(num % 16 + '0');
+
+	}
 }
 /**
  *print_pointer - prints pointer
@@ -90,6 +105,10 @@ int print_pointer(va_list c)
 
 	num += _putchar('0');
 	num += _putchar('x');
-	num += print_hexa_pointer(i);
-	return (num);
+	print_hexa_pointer(i);
+	for (num = 0; i / 16; num++)
+	{
+		i = i / 16;
+	}
+	return (num + 1);
 }
