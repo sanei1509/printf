@@ -26,10 +26,11 @@ type_t_f search[] = {
 	{'o', print_octal},
 	{'x', print_hexa},
 	{'X', print_HEXA},
+	{'p', print_pointer},
 	{'\0', NULL},
 	};
 
-while (iterarr != 12)
+while (iterarr != 13)
 {
 	if (search[iterarr].tipo == s)
 	{
@@ -51,8 +52,8 @@ while (iterarr != 12)
  */
 int verifica(char c)
 {
-	char *cadena = "csdiRurboxX";
-	int t = 10;
+	char *cadena = "csdiRurboxXp";
+	int t = 11;
 	int i = 0;
 
 	while (i <= t)
