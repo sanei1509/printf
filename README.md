@@ -93,7 +93,7 @@ input
     int print_rev(va_list ch);
 ````
 ## Flowchart
-<img src="https://user-images.githubusercontent.com/69850751/158677376-89e6213c-da73-42c6-b6b9-8214e53b0833.png"/>
+<img src="https://user-images.githubusercontent.com/98335785/158920549-96fb6dd9-a336-4382-878f-bdcaaabfaf0d.png"/>
 
 ## authors & github accounts
 [Valentin repetto](https://github.com/valerepetto14)    |  [Santiago Neira](https://github.com/sanei1509] )    
